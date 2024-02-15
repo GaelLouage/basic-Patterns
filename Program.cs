@@ -3,6 +3,7 @@
 
 
 
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -24,10 +25,45 @@ internal class Program
         //PrintBasicPattern7();
         //Console.WriteLine("Pattern ex 8:");
         //PrintBasicPattern8();
-        Console.WriteLine("Pattern ex 9:");
-        PrintBasicPattern9();
+        //Console.WriteLine("Pattern ex 9:");
+        //PrintBasicPattern9();
+        Console.WriteLine("Pattern ex 10:");
+        printbasicpattern10();
         Console.ReadKey();
     }
+
+    private static void printbasicpattern10()
+    {
+        var stars = 1;
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < stars; j++)
+            {
+                Console.Write("*");
+            }
+            if(i <= 3)
+            { 
+                stars++;
+            }
+            else
+            {
+                stars--;
+            }
+            Console.WriteLine();
+        }
+    }
+
+    //   Pattern ex 9:
+    //    *
+    //   ***
+    //  *****
+    // *******
+    //*********
+    //*********
+    // *******
+    //  *****
+    //   ***
+    //    *
 
     private static void PrintBasicPattern9()
     {
