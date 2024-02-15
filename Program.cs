@@ -1,6 +1,7 @@
 ﻿
 
 
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -18,10 +19,48 @@ internal class Program
         //Console.WriteLine("Pattern ex 6:");
         //PrintBasicPattern6();
 
-        Console.WriteLine("Pattern ex 7:");
-        PrintBasicPattern7();
+        //Console.WriteLine("Pattern ex 7:");
+        //PrintBasicPattern7();
+        Console.WriteLine("Pattern ex 8:");
+        PrintBasicPattern8();
         Console.ReadKey();
     }
+
+     /**********
+      pattern 8
+        *******
+         *****
+          ***
+           *
+    */
+    private static void PrintBasicPattern8()
+    {
+        var spaces = 0;
+        var stars = 9;
+        for (int i = 0; i < 5; i++)
+        {
+
+            for (int k = 0; k < spaces; k++)
+            {
+                Console.Write(" ");
+            }
+            for (int j = 0; j < stars; j++)
+            {
+                Console.Write("*");
+            }
+
+            for (int k = 0; k < spaces; k++)
+            {
+                Console.Write(" ");
+            }
+            spaces += 1;
+            stars -= 2;
+            Console.WriteLine();
+        }
+    }
+
+
+
 
     private static void PrintBasicPattern7()
     {
@@ -55,14 +94,14 @@ internal class Program
     private static void PrintBasicPattern6()
     {
         var counter = 5;
-       for (int i = 0; i < 5; i++)
-       {
-            for(int j = 0; j < counter; j++)
+        for (int i = 0; i < 5; i++)
+        {
+            for (int j = 0; j < counter; j++)
             {
                 Console.Write($"{j + 1}");
             }
             counter -= 1;
-            Console.WriteLine( );
+            Console.WriteLine();
         }
     }
 
@@ -86,11 +125,11 @@ internal class Program
         var counter = 1;
         for (int i = 0; i < 5; i++)
         {
-            for(int j = 1; j <= counter; j++)
+            for (int j = 1; j <= counter; j++)
             {
                 Console.Write(counter);
             }
-            Console.WriteLine();    
+            Console.WriteLine();
             counter++;
         }
     }
@@ -105,15 +144,15 @@ internal class Program
                 Console.Write($"{j + 1}");
             }
             counter++;
-            Console.WriteLine();    
+            Console.WriteLine();
         }
     }
     // pattern1
-    private static void PrintBasicPattern() 
+    private static void PrintBasicPattern()
     {
-        for(int i = 0; i < 5; i++) 
+        for (int i = 0; i < 5; i++)
         {
-            for(int j = 0;j < 5; j++)
+            for (int j = 0; j < 5; j++)
             {
                 Console.Write("*");
             }
@@ -126,7 +165,7 @@ internal class Program
         int counter = 1;
         for (int i = 0; i < 5; i++)
         {
-            for(int j = 0; j < counter; j++)
+            for (int j = 0; j < counter; j++)
             {
                 Console.Write("*");
             }
