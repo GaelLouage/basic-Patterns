@@ -2,6 +2,7 @@
 
 
 
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -21,18 +22,74 @@ internal class Program
 
         //Console.WriteLine("Pattern ex 7:");
         //PrintBasicPattern7();
-        Console.WriteLine("Pattern ex 8:");
-        PrintBasicPattern8();
+        //Console.WriteLine("Pattern ex 8:");
+        //PrintBasicPattern8();
+        Console.WriteLine("Pattern ex 9:");
+        PrintBasicPattern9();
         Console.ReadKey();
     }
 
-     /**********
-      pattern 8
-        *******
-         *****
-          ***
-           *
-    */
+    private static void PrintBasicPattern9()
+    {
+        // top tree
+        var stars = 1;
+        var spaces = 5;
+
+        for (int i = 0; i < 5; i++)
+        {
+            for (int k = 0; k < spaces; k++)
+            {
+                Console.Write(" ");
+            }
+            for (int k = 0; k < stars; k++)
+            {
+                Console.Write("*");
+            }
+            for (int k = 0; k < spaces; k++)
+            {
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+            spaces--;
+            stars += 2;
+        }
+        stars = 9;
+        spaces = 1;
+        for (int i = 0; i < 5; i++) 
+        {
+            for(int j = 0; j < spaces; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 0; j < stars; j++)
+            {
+                Console.Write("*");
+            }
+
+            for (int j = 0; j < spaces; j++)
+            {
+                Console.Write(" ");
+            }
+
+            Console.WriteLine();
+            stars -= 2;
+            spaces++;
+        }
+        
+   
+    
+
+    }
+
+    /**********
+     pattern 8
+
+       *******
+        *****
+         ***
+          *
+   */
     private static void PrintBasicPattern8()
     {
         var spaces = 0;
@@ -148,7 +205,7 @@ internal class Program
         }
     }
     // pattern1
-    private static void PrintBasicPattern()
+    private static void PrintBasicPattern1()
     {
         for (int i = 0; i < 5; i++)
         {
