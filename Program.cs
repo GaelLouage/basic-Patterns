@@ -4,6 +4,7 @@
 
 
 
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -27,11 +28,43 @@ internal class Program
         //PrintBasicPattern8();
         //Console.WriteLine("Pattern ex 9:");
         //PrintBasicPattern9();
-        Console.WriteLine("Pattern ex 10:");
-        printbasicpattern10();
+        //Console.WriteLine("Pattern ex 10:");
+        //printbasicpattern10();
+        Console.WriteLine("Pattern ex 11:");
+        printbasicpattern11();
         Console.ReadKey();
     }
 
+    private static void printbasicpattern11()
+    {
+        var start = 1;
+        var counter = 1;
+        for (int i = 0; i < 5; i++)
+        {
+            if (i % 2 == 0) start = 1;
+            else start = 0;
+
+            for (int j = 0; j <= i; j++)
+            {
+                Console.Write(start);
+                start = 1 - start;
+            }
+
+
+            Console.WriteLine();
+        }
+    }
+
+    //    Pattern ex 10:
+    //*
+    //**
+    //***
+    //****
+    //*****
+    //****
+    //***
+    //**
+    //*
     private static void printbasicpattern10()
     {
         var stars = 1;
