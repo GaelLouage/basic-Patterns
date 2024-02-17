@@ -5,6 +5,7 @@
 
 
 
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -30,15 +31,60 @@ internal class Program
         //PrintBasicPattern9();
         //Console.WriteLine("Pattern ex 10:");
         //printbasicpattern10();
-        Console.WriteLine("Pattern ex 11:");
-        printbasicpattern11();
+        //Console.WriteLine("Pattern ex 11:");
+        //printbasicpattern11();
+        Console.WriteLine("Pattern ex 12:");
+        printbasicpattern12();
         Console.ReadKey();
     }
+    /*
+     Pattern ex 12:
+1      1
+12    21
+123  321
+12344321
 
+     */
+    private static void printbasicpattern12()
+    {
+        var rows = 9;
+       var start = 1;
+       var counter = 1;
+       var spaces = 2 * ( rows -1);
+       for (int i = 0; i < rows; i++) 
+       {
+            for (int j = 0; j < start; j++)
+            {
+                Console.Write(counter);
+                counter++;
+            }
+            for (int j = 0; j < spaces; j++)
+            {
+                Console.Write(" ");
+            }
+            for (int j = 0; j < start; j++)
+            {
+                counter--;
+                Console.Write(counter);
+            }
+            Console.WriteLine();
+            start++;
+            spaces-=2;
+       }
+    }
+
+    /*
+1
+01
+101
+0101
+10101
+010101                          
+*/
     private static void printbasicpattern11()
     {
         var start = 1;
-        var counter = 1;
+
         for (int i = 0; i < 5; i++)
         {
             if (i % 2 == 0) start = 1;
@@ -74,8 +120,8 @@ internal class Program
             {
                 Console.Write("*");
             }
-            if(i <= 3)
-            { 
+            if (i <= 3)
+            {
                 stars++;
             }
             else
@@ -124,9 +170,9 @@ internal class Program
         }
         stars = 9;
         spaces = 1;
-        for (int i = 0; i < 5; i++) 
+        for (int i = 0; i < 5; i++)
         {
-            for(int j = 0; j < spaces; j++)
+            for (int j = 0; j < spaces; j++)
             {
                 Console.Write(" ");
             }
@@ -145,9 +191,9 @@ internal class Program
             stars -= 2;
             spaces++;
         }
-        
-   
-    
+
+
+
 
     }
 
