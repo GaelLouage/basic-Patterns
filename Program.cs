@@ -6,10 +6,14 @@
 
 
 
+using PatternsExercise;
+
 internal class Program
 {
     private static void Main(string[] args)
     {
+        BasicMathProblems bm = new BasicMathProblems();
+        bm.PrintPrimeAmount(100);
         //Console.WriteLine("Pattern ex 1:");
         //PrintBasicPattern();
         //Console.WriteLine("Pattern ex 2:");
