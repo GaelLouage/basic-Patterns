@@ -12,8 +12,8 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        BasicMathProblems bm = new BasicMathProblems();
-        bm.PrintPrimeAmount(100);
+        //BasicMathProblems bm = new BasicMathProblems();
+        //bm.PrintPrimeAmount(100);
         //Console.WriteLine("Pattern ex 1:");
         //PrintBasicPattern();
         //Console.WriteLine("Pattern ex 2:");
@@ -37,18 +37,43 @@ internal class Program
         //printbasicpattern10();
         //Console.WriteLine("Pattern ex 11:");
         //printbasicpattern11();
-        Console.WriteLine("Pattern ex 12:");
-        printbasicpattern12();
+        //Console.WriteLine("Pattern ex 12:");
+        //printbasicpattern12();
+        Console.WriteLine("Pattern ex 13:");
+        printbasicpattern13();
         Console.ReadKey();
     }
+    /*Pattern ex 13:
+
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+ */
+    private static void printbasicpattern13()
+    {
+        var valueToAdd = 0;
+       for(int i = 0; i <= 6; i++)
+        {
+            
+            for(int j = 0; j < i; j++)
+            {
+                valueToAdd++;
+                Console.Write(valueToAdd + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
     /*
-     Pattern ex 12:
+Pattern ex 12:
 1      1
 12    21
 123  321
 12344321
 
-     */
+*/
     private static void printbasicpattern12()
     {
         var rows = 9;
