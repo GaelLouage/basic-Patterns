@@ -39,10 +39,27 @@ internal class Program
         //printbasicpattern11();
         //Console.WriteLine("Pattern ex 12:");
         //printbasicpattern12();
-        Console.WriteLine("Pattern ex 13:");
-        printbasicpattern13();
+        //Console.WriteLine("Pattern ex 13:");
+        //printbasicpattern13();
+        Console.WriteLine("Pattern ex 14:");
+        printbasicpattern14();
         Console.ReadKey();
     }
+
+    private static void printbasicpattern14()
+    {
+        var chars = "abcdefghijklmnopqrstuvwxyz".ToUpper();
+        for (int i = 0; i < 28; i++)
+        {
+            for(int j = 0; j <= i; j++)
+            {
+                if (i >= chars.Length) break;
+                Console.Write(chars[j]);
+            }
+            Console.WriteLine();
+        }
+    }
+
     /*Pattern ex 13:
 
 1
@@ -50,7 +67,7 @@ internal class Program
 4 5 6
 7 8 9 10
 11 12 13 14 15
- */
+*/
     private static void printbasicpattern13()
     {
         var valueToAdd = 0;
