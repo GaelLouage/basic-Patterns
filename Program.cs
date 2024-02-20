@@ -41,9 +41,24 @@ internal class Program
         //printbasicpattern12();
         //Console.WriteLine("Pattern ex 13:");
         //printbasicpattern13();
-        Console.WriteLine("Pattern ex 14:");
-        printbasicpattern14();
+        //Console.WriteLine("Pattern ex 14:");
+        //printbasicpattern14();
+        Console.WriteLine("Pattern ex 15:");
+        printbasicpattern15();
         Console.ReadKey();
+    }
+
+    private static void printbasicpattern15()
+    {
+        var chars = "abcdefghijklmnopqrstuvwxyz".ToUpper();
+        for (int i = 5; i > 0; i--)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                Console.Write(chars[j]);
+            }
+            Console.WriteLine();
+        }
     }
 
     private static void printbasicpattern14()
