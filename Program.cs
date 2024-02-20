@@ -45,15 +45,74 @@ internal class Program
         //printbasicpattern14();
         //Console.WriteLine("Pattern ex 15:");
         //printbasicpattern15();
-        Console.WriteLine("Pattern ex 16:");
-        printbasicpattern16();
+        //Console.WriteLine("Pattern ex 16:");
+        //printbasicpattern16();
+        Console.WriteLine("Pattern ex 17:");
+        printbasicpattern17();
         Console.ReadKey();
     }
+    /*Pattern ex 17:
+            A
+           ABA
+          ABCBA
+         ABCDCBA
+        ABCDEDCBA
+       ABCDEFEDCBA
+    */
+    private static void printbasicpattern17()
+    {
+        var chars = "abcdefghijklmnopqrstuvwxyz".ToUpper();
+        var start = 6;
+        var charStart = 1;
+        var charTaker = 0;
+        var spaces = start  * 2;
+ 
+        for (int i = 0; i < start; i++)
+        {
+            for(int j = 0; j < spaces; j++)
+            {
+                Console.Write(" "); 
+            }
+           
+            for (int j = 0; j < charStart; j++)
+            {
+                if(j <= (charStart / 2))
+                {
+               
+                    Console.Write(chars[charTaker]);
+                    charTaker++;
+                }
+                if (j == charStart / 2) charTaker--;
+                if ( j > (charStart /2))
+                {
+                    charTaker--;
+                    Console.Write(chars[charTaker]);
+                
+                }
+            }
+            for (int j = 0; j < spaces; j++)
+            {
+                Console.Write(" ");
+            }
+            spaces--;
+            charStart += 2;
+            charTaker = 0;
 
+            Console.WriteLine();
+        }
+    }
+
+    /*
+A
+BB
+CCC
+DDDD
+EEEEE
+*/
     private static void printbasicpattern16()
     {
         var chars = "abcdefghijklmnopqrstuvwxyz".ToUpper();
-        for (int i = 0; i < 5; i++) 
+        for (int i = 0; i < 10; i++) 
         {
           
             for(int j = 0; j <= i; j++)
