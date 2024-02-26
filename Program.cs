@@ -47,18 +47,53 @@ internal class Program
         //printbasicpattern15();
         //Console.WriteLine("Pattern ex 16:");
         //printbasicpattern16();
-        Console.WriteLine("Pattern ex 17:");
-        printbasicpattern17();
+        //Console.WriteLine("Pattern ex 17:");
+        //printbasicpattern17();
+          Console.WriteLine("Pattern ex 18:");
+        printbasicpattern18();
         Console.ReadKey();
     }
+    /*Pattern ex 18:
+E
+DE
+CDE
+BCDE
+ABCDE*/
+    private static void printbasicpattern18()
+    {
+        var chars = "abcdefghijklmnopqrstuvwxyz".ToUpper();
+        var rows = 5;
+        var counterStart = rows;
+        var columns = 1;
+        var result = "";
+        for (var i = 0; i < rows; i++)
+        {
+            for (var j = 0; j < columns; j++)
+            {
+                counterStart--;
+                result += chars[counterStart].ToString();
+                if(j == columns - 1)
+                {
+                    Console.Write($"{string.Join("",result.Reverse())}");
+                }
+                
+            }
+            Console.WriteLine();
+            result = "";
+            columns++;
+            counterStart = rows;
+  
+        }
+    }
+
     /*Pattern ex 17:
-            A
-           ABA
-          ABCBA
-         ABCDCBA
-        ABCDEDCBA
-       ABCDEFEDCBA
-    */
+       A
+      ABA
+     ABCBA
+    ABCDCBA
+   ABCDEDCBA
+  ABCDEFEDCBA
+*/
     private static void printbasicpattern17()
     {
         var chars = "abcdefghijklmnopqrstuvwxyz".ToUpper();

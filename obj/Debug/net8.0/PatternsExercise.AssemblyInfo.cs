@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PatternsExercise")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a08bd4f716ada1a32770dc095bcf05d755706ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ab3201893fc895f31da18ecca65b86e8bb9d386")]
 [assembly: System.Reflection.AssemblyProductAttribute("PatternsExercise")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PatternsExercise")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
