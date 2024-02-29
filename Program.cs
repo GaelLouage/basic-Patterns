@@ -49,10 +49,78 @@ internal class Program
         //printbasicpattern16();
         //Console.WriteLine("Pattern ex 17:");
         //printbasicpattern17();
-          Console.WriteLine("Pattern ex 18:");
-        printbasicpattern18();
+        //  Console.WriteLine("Pattern ex 18:");
+        //printbasicpattern18();
+        Console.WriteLine("Pattern ex 19:");
+        printbasicpattern19();
         Console.ReadKey();
     }
+    /*Pattern ex 19:
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+****  ****
+**********
+*/
+    private static void printbasicpattern19()
+    {
+        bool firstTreeIsFinished = false;
+        var rows = 5;
+        var stars = 5;
+        var spaces = 0;
+        for (int i = 0; i < rows; i++)
+        {
+            if(!firstTreeIsFinished)
+            {
+                for (int j = 0; j < stars; j++)
+                {
+                    Console.Write("*");
+                }
+                for (int k = 0; k < spaces * 2; k++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = 0; j < stars; j++)
+                {
+                    Console.Write("*");
+                }
+                stars--;
+                spaces++;
+                Console.WriteLine();
+            }
+          
+        }
+        rows = 5;
+        stars = 1;
+        spaces = 4;
+        for (int i = 0; i < rows; i++)
+        {
+            for(int j = 0; j < stars; j++)
+            {
+                Console.Write("*");
+            }
+        
+            for (int j = 0; j < spaces * 2; j++)
+            {
+                Console.Write(" ");
+            }
+            for (int j = 0; j < stars; j++)
+            {
+                Console.Write("*");
+            }
+            stars++;
+            spaces--;
+            Console.WriteLine();
+        }
+
+    }
+
     /*Pattern ex 18:
 E
 DE
