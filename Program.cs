@@ -69,13 +69,14 @@ internal class Program
 */
     private static void printbasicpattern19()
     {
-      
+        var firstThreefinished = false;
         var rows = 5;
         var stars = 5;
         var spaces = 0;
         for (int i = 0; i < rows; i++)
         {
-        
+            if (!firstThreefinished)
+            {
                 for (int j = 0; j < stars; j++)
                 {
                     Console.Write("*");
@@ -92,30 +93,36 @@ internal class Program
                 stars--;
                 spaces++;
                 Console.WriteLine();
-        }
-        rows = 5;
-        stars = 1;
-        spaces = 4;
-        for (int i = 0; i < rows; i++)
-        {
-            for(int j = 0; j < stars; j++)
-            {
-                Console.Write("*");
             }
-        
-            for (int j = 0; j < spaces * 2; j++)
+              
+            if(i >= 4 && !firstThreefinished)
             {
-                Console.Write(" ");
+                firstThreefinished = true;
+                i = 0;
+                rows = 5;
+                stars = 1;
+                spaces = 4;
             }
-            for (int j = 0; j < stars; j++)
+            if (firstThreefinished)
             {
-                Console.Write("*");
-            }
-            stars++;
-            spaces--;
-            Console.WriteLine();
-        }
+                for (int j = 0; j < stars; j++)
+                {
+                    Console.Write("*");
+                }
 
+                for (int j = 0; j < spaces * 2; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j < stars; j++)
+                {
+                    Console.Write("*");
+                }
+                stars++;
+                spaces--;
+                Console.WriteLine();
+            }
+        }
     }
 
     /*Pattern ex 18:
