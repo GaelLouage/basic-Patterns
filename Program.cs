@@ -69,14 +69,13 @@ internal class Program
 */
     private static void printbasicpattern19()
     {
-        bool firstTreeIsFinished = false;
+      
         var rows = 5;
         var stars = 5;
         var spaces = 0;
         for (int i = 0; i < rows; i++)
         {
-            if(!firstTreeIsFinished)
-            {
+        
                 for (int j = 0; j < stars; j++)
                 {
                     Console.Write("*");
@@ -93,8 +92,6 @@ internal class Program
                 stars--;
                 spaces++;
                 Console.WriteLine();
-            }
-          
         }
         rows = 5;
         stars = 1;
