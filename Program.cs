@@ -51,10 +51,87 @@ internal class Program
         //printbasicpattern17();
         //  Console.WriteLine("Pattern ex 18:");
         //printbasicpattern18();
-        Console.WriteLine("Pattern ex 19:");
-        printbasicpattern19();
+        //Console.WriteLine("Pattern ex 19:");
+        //printbasicpattern19();
+        Console.WriteLine("Pattern ex 20:");
+        printbasicpattern20();
         Console.ReadKey();
     }
+    /*
+     Pattern ex 20:
+*                    *
+**                  **
+***                ***
+****              ****
+*****            *****
+******          ******
+*******        *******
+********      ********
+*********    *********
+**********  **********
+**********************
+**********  **********
+*********    *********
+********      ********
+*******        *******
+******          ******
+*****            *****
+****              ****
+***                ***
+**                  **
+*                    *
+     
+     */
+    private static void printbasicpattern20()
+    {
+        var rows = 10;
+        var spaces = rows * 2;
+        var columns = 1;
+        for (int i = 0; i <= rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                Console.Write("*");
+            }
+            for (int j = 0; j < spaces; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 0; j < columns; j++)
+            {
+                Console.Write("*");
+            }
+            spaces -= 2;
+            columns++;
+
+            Console.WriteLine();
+        }
+
+        spaces = 2;
+        columns = rows;
+        for (int i = 0; i <= rows; i++)
+        {
+            for (int j = 0; j < columns; j++)
+            {
+                Console.Write("*");
+            }
+            for (int j = 0; j < spaces; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 0; j < columns; j++)
+            {
+                Console.Write("*");
+            }
+            spaces += 2;
+            columns--;
+
+            Console.WriteLine();
+        }
+    }
+
     /*Pattern ex 19:
 **********
 ****  ****
@@ -94,8 +171,8 @@ internal class Program
                 spaces++;
                 Console.WriteLine();
             }
-              
-            if(i >= 4 && !firstThreefinished)
+
+            if (i >= 4 && !firstThreefinished)
             {
                 firstThreefinished = true;
                 i = 0;
@@ -144,17 +221,17 @@ ABCDE*/
             {
                 counterStart--;
                 result += chars[counterStart].ToString();
-                if(j == columns - 1)
+                if (j == columns - 1)
                 {
-                    Console.Write($"{string.Join("",result.Reverse())}");
+                    Console.Write($"{string.Join("", result.Reverse())}");
                 }
-                
+
             }
             Console.WriteLine();
             result = "";
             columns++;
             counterStart = rows;
-  
+
         }
     }
 
@@ -172,29 +249,29 @@ ABCDE*/
         var start = 6;
         var charStart = 1;
         var charTaker = 0;
-        var spaces = start  * 2;
- 
+        var spaces = start * 2;
+
         for (int i = 0; i < start; i++)
         {
-            for(int j = 0; j < spaces; j++)
+            for (int j = 0; j < spaces; j++)
             {
-                Console.Write(" "); 
+                Console.Write(" ");
             }
-           
+
             for (int j = 0; j < charStart; j++)
             {
-                if(j <= (charStart / 2))
+                if (j <= (charStart / 2))
                 {
-               
+
                     Console.Write(chars[charTaker]);
                     charTaker++;
                 }
                 if (j == charStart / 2) charTaker--;
-                if ( j > (charStart /2))
+                if (j > (charStart / 2))
                 {
                     charTaker--;
                     Console.Write(chars[charTaker]);
-                
+
                 }
             }
             for (int j = 0; j < spaces; j++)
@@ -219,10 +296,10 @@ EEEEE
     private static void printbasicpattern16()
     {
         var chars = "abcdefghijklmnopqrstuvwxyz".ToUpper();
-        for (int i = 0; i < 10; i++) 
+        for (int i = 0; i < 10; i++)
         {
-          
-            for(int j = 0; j <= i; j++)
+
+            for (int j = 0; j <= i; j++)
             {
                 Console.Write(chars[i]);
             }
@@ -254,7 +331,7 @@ A
         var chars = "abcdefghijklmnopqrstuvwxyz".ToUpper();
         for (int i = 0; i < 28; i++)
         {
-            for(int j = 0; j <= i; j++)
+            for (int j = 0; j <= i; j++)
             {
                 if (i >= chars.Length) break;
                 Console.Write(chars[j]);
@@ -274,10 +351,10 @@ A
     private static void printbasicpattern13()
     {
         var valueToAdd = 0;
-       for(int i = 0; i <= 6; i++)
+        for (int i = 0; i <= 6; i++)
         {
-            
-            for(int j = 0; j < i; j++)
+
+            for (int j = 0; j < i; j++)
             {
                 valueToAdd++;
                 Console.Write(valueToAdd + " ");
@@ -297,11 +374,11 @@ Pattern ex 12:
     private static void printbasicpattern12()
     {
         var rows = 9;
-       var start = 1;
-       var counter = 1;
-       var spaces = 2 * ( rows -1);
-       for (int i = 0; i < rows; i++) 
-       {
+        var start = 1;
+        var counter = 1;
+        var spaces = 2 * (rows - 1);
+        for (int i = 0; i < rows; i++)
+        {
             for (int j = 0; j < start; j++)
             {
                 Console.Write(counter);
@@ -318,8 +395,8 @@ Pattern ex 12:
             }
             Console.WriteLine();
             start++;
-            spaces-=2;
-       }
+            spaces -= 2;
+        }
     }
 
     /*
