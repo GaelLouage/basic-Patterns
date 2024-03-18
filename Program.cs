@@ -53,12 +53,47 @@ internal class Program
         //printbasicpattern18();
         //Console.WriteLine("Pattern ex 19:");
         //printbasicpattern19();
-        Console.WriteLine("Pattern ex 20:");
-        printbasicpattern20();
+        //Console.WriteLine("Pattern ex 20:");
+        //printbasicpattern20();
+        Console.WriteLine("Pattern ex 21:");
+        printbasicpattern21();
         Console.ReadKey();
     }
+    /*Pattern ex 21:
+******
+*    *
+*    *
+*    *
+*    *
+******
+*/
+    private static void printbasicpattern21()
+    {
+        int width = 6;
+        int height = 6;
+        int spaces = width / 2;
+        for (int i = 0; i < height; i++)
+        {
+           
+            for (int j = 0; j< width; j++)
+            {
+                if ((i == 0 && j > 0) && (i == 0 && j < width) || (i == height - 1 && j > 0) && (i == height - 1 && j < width))
+                {
+                    Console.Write("*");
+                } else if( (j < width-1 && i < height-1) && (j>0 && i < height-1))
+                {
+                    Console.Write(" ");
+                } else
+                {
+                    Console.Write("*");
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+
     /*
-     Pattern ex 20:
+Pattern ex 20:
 *                    *
 **                  **
 ***                ***
@@ -80,8 +115,8 @@ internal class Program
 ***                ***
 **                  **
 *                    *
-     
-     */
+
+*/
     private static void printbasicpattern20()
     {
         var rows = 10;
